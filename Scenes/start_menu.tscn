@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://c72qaht0msew6"]
+
+[ext_resource type="FontFile" uid="uid://d18ulgt8qcr4m" path="res://Assets/fonts/Kenney Pixel Square.ttf" id="1_nwnr7"]
+[ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_uou7s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mt768"]
+font = ExtResource("1_nwnr7")
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="Theme" id="Theme_t1n7w"]
+default_font = ExtResource("1_nwnr7")
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uou7s")
+
+[node name="StartMenu" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_right = 68.0
+offset_bottom = 24.0
+grow_horizontal = 2
+text = "MARTIAN MIKE"
+label_settings = SubResource("LabelSettings_mt768")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="BTNStartGame" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.565
+offset_top = -62.31
+offset_right = 62.4352
+offset_bottom = -30.31
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_t1n7w")
+text = "START GAME"
+
+[node name="BTNQuit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -16.0
+offset_right = 62.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_t1n7w")
+text = "QUIT"
+
+[connection signal="pressed" from="BTNStartGame" to="." method="_on_btn_start_game_pressed"]
+[connection signal="pressed" from="BTNQuit" to="." method="_on_btn_quit_pressed"]

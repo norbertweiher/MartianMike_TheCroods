@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf4m3xotgd7wi"]
+
+[ext_resource type="Script" path="res://Scripts/win_screen.gd" id="1_d82tu"]
+[ext_resource type="FontFile" uid="uid://d18ulgt8qcr4m" path="res://Assets/fonts/Kenney Pixel Square.ttf" id="2_cjftr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6nmt8"]
+font = ExtResource("2_cjftr")
+
+[node name="WinScreen" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d82tu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.743484, 0.2662, 0.474825, 0.490196)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WIN!!!"
+label_settings = SubResource("LabelSettings_6nmt8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = 17.0
+offset_right = 28.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "RETRY"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

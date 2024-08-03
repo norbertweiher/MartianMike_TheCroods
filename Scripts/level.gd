@@ -2,7 +2,7 @@ extends Node2D
 @onready var Player = $Player
 #var Player = null
 @onready var PlayerStart = $StartPoint
-@onready var exit = $Exit
+@onready var exit = $Exits/Exit
 @export var next_level: PackedScene = null
 @onready var death_zone = $DeathZone
 @onready var hud = $UI/HUD
@@ -57,6 +57,9 @@ func reset_player():
 	Player.velocity = Vector2.ZERO
 
 func _on_exit_body_entered(body):
+	print("LEVEL EXIT")
+	print(is_final_level)
+	print(str(next_level))
 	win = true
 	if is_final_level or (next_level != null):
 		if body is Player:
@@ -72,9 +75,7 @@ func _on_level_timer_timeout():
 	if not win:
 		time_left-=1
 		hud.set_time_label(time_left)
-		print("TICK")
 		if time_left<0:
-			print("TIMEOUT")
 			AutoLoad.play_sfx("hurt")
 			reset_player()
 			time_left = level_time

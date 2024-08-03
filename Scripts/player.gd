@@ -22,8 +22,6 @@ func update_animations(direction):
 			
 
 func jump(jumpvelocity):
-	print("JUMP CALLED")
-	print(jumpvelocity)
 	velocity.y = jumpvelocity
 
 func _physics_process(delta):

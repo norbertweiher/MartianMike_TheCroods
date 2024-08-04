@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dheaiv041bswr"]
 
 [ext_resource type="Script" path="res://Scripts/GoldCoin.gd" id="1_1kksl"]
-[ext_resource type="Texture2D" uid="uid://j57g1noei0bn" path="res://Assets/textures/other/GoldCoinSmall.png" id="2_ecnf8"]
+[ext_resource type="Texture2D" uid="uid://dfsghvps3vadn" path="res://Assets/textures/other/GoldCoinSmall.png" id="2_ecnf8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbbrj"]
 radius = 28.3333
@@ -15,7 +15,6 @@ script = ExtResource("1_1kksl")
 texture = ExtResource("2_ecnf8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(182.5, 12.5)
 shape = SubResource("CircleShape2D_cbbrj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

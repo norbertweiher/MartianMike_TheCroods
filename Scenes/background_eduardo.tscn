@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0dn0o8pii2yl"]
+
+[ext_resource type="Texture2D" uid="uid://do556akrvogda" path="res://Assets/Backgrounds/BackgroundEduardo.jpg.jpeg" id="1_ca6go"]
+
+[node name="BackgroundEduardo" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1240, 810)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(570, 62)
+rotation = 1.5708
+scale = Vector2(0.329431, 0.359232)
+texture = ExtResource("1_ca6go")

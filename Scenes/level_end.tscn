@@ -3,95 +3,92 @@
 [ext_resource type="Texture2D" uid="uid://fxe05qfqc8ax" path="res://Assets/textures/other/End (Pressed) (64x64).png" id="1_h10ol"]
 [ext_resource type="Script" path="res://Scripts/level_end.gd" id="1_pg26a"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0m2tl"]
-radius = 4.47214
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5dhfb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqtui"]
 atlas = ExtResource("1_h10ol")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rsq4l"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsaaw"]
 atlas = ExtResource("1_h10ol")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_75o1f"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi7dl"]
 atlas = ExtResource("1_h10ol")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ma1v5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb3tx"]
 atlas = ExtResource("1_h10ol")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vhje4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdobx"]
 atlas = ExtResource("1_h10ol")
 region = Rect2(256, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tl4b2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjj3g"]
 atlas = ExtResource("1_h10ol")
 region = Rect2(320, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u5ty8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1huqo"]
 atlas = ExtResource("1_h10ol")
 region = Rect2(384, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lcx4a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyq8p"]
 atlas = ExtResource("1_h10ol")
 region = Rect2(448, 0, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hmgoe"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wl3qr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5dhfb")
+"texture": SubResource("AtlasTexture_oqtui")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rsq4l")
+"texture": SubResource("AtlasTexture_qsaaw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_75o1f")
+"texture": SubResource("AtlasTexture_vi7dl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ma1v5")
+"texture": SubResource("AtlasTexture_pb3tx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vhje4")
+"texture": SubResource("AtlasTexture_fdobx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tl4b2")
+"texture": SubResource("AtlasTexture_pjj3g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u5ty8")
+"texture": SubResource("AtlasTexture_1huqo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lcx4a")
+"texture": SubResource("AtlasTexture_fyq8p")
 }],
 "loop": true,
-"name": &"default",
+"name": &"ExitAnim",
 "speed": 20.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcjgv"]
-size = Vector2(30, 6)
+[sub_resource type="CircleShape2D" id="CircleShape2D_qw8y6"]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xfp0"]
+size = Vector2(32, 8)
 
 [node name="LevelEnd" type="Area2D"]
-collision_layer = 8
+collision_layer = 32
 script = ExtResource("1_pg26a")
 
-[node name="Trigger" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
-rotation = 6.16601
-shape = SubResource("CircleShape2D_0m2tl")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wl3qr")
+animation = &"ExitAnim"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qw8y6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 8
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
-sprite_frames = SubResource("SpriteFrames_hmgoe")
-autoplay = "default"
-frame_progress = 0.975529
-
-[node name="Floor" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 29)
-shape = SubResource("RectangleShape2D_wcjgv")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 28)
+shape = SubResource("RectangleShape2D_1xfp0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

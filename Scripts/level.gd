@@ -38,7 +38,7 @@ func _ready():
 	for goldcoin in goldcoins:
 		goldcoin.picked_up_coin.connect(_on_pickedup_goldcoin)
 	time_left = level_time
-	hud.set_time_label(time_left)
+	hud.set_time_label(time_left,points)
 	timer_node = Timer.new()
 	timer_node.name="Level Timer"
 	timer_node.wait_time = 1
@@ -88,18 +88,18 @@ func _on_levelend_entered():
 func _on_level_timer_timeout():
 	if not win:
 		time_left-=1
-		hud.set_time_label(time_left)
+		hud.set_time_label(time_left,points)
 		if time_left<0:
 			AutoLoad.play_sfx("hurt")
 			reset_player()
 			time_left = level_time
-			hud.set_time_label(level_time)
+			hud.set_time_label(level_time,points)
 
 func _update_start_position(position):
 	print("CHECK POINT REACHED" + str(position))
 	PlayerStart.global_position = position
 
 func _on_pickedup_goldcoin():
-	print("COLLECTED")
+	#print("COLLECTED")
 	points+=10
-	print("POINTS: "+str(points))
+	#print("POINTS: "+str(points))

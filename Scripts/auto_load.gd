@@ -3,8 +3,8 @@ extends Node
 var hurt = preload("res://Assets/audio/hurt.wav")
 var jump = preload("res://Assets/audio/jump.wav")
 
+
 func play_sfx(sfx_name: String):
-	print("JUMP SFX")
 	var stream = null
 	if (sfx_name == "hurt"):
 		stream = hurt
@@ -18,3 +18,5 @@ func play_sfx(sfx_name: String):
 	asp.stream = stream
 	add_child(asp)
 	asp.play()
+	
+

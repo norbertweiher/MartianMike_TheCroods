@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://746wd8ww1psu" path="res://Levels/lvl_3_eduardo.tscn" id="2_hgw65"]
 [ext_resource type="PackedScene" uid="uid://du26e5t6ttg8f" path="res://Scenes/ui.tscn" id="3_vx1nt"]
 [ext_resource type="PackedScene" uid="uid://nioaoo781fvn" path="res://Scenes/bg.tscn" id="4_kl1at"]
+[ext_resource type="Texture2D" uid="uid://cph7hrxt3dg5i" path="res://Assets/textures/bg/Gray.png" id="5_7lahx"]
 [ext_resource type="PackedScene" uid="uid://dkak3svr6khj3" path="res://Scenes/tile_map.tscn" id="5_ffa82"]
 [ext_resource type="PackedScene" uid="uid://cri6msgjx1d3f" path="res://Scenes/check_point.tscn" id="5_pa584"]
 [ext_resource type="PackedScene" uid="uid://bxmlfmvahquuy" path="res://Scenes/saw_ball.tscn" id="6_nro37"]
@@ -11,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dmkdk1w45doo2" path="res://Scenes/jump_pad.tscn" id="8_i1s1a"]
 [ext_resource type="PackedScene" uid="uid://v53q03vq2c1g" path="res://Scenes/start_point.tscn" id="9_ifiiy"]
 [ext_resource type="PackedScene" uid="uid://dm8kloddub4r" path="res://Scenes/player.tscn" id="10_y06ny"]
-[ext_resource type="PackedScene" uid="uid://6ds0uyp5ffl5" path="res://Scenes/exit.tscn" id="11_6xr1l"]
 [ext_resource type="PackedScene" uid="uid://bulinkyqi1a0w" path="res://Scenes/death_zone.tscn" id="12_rw28y"]
 [ext_resource type="PackedScene" uid="uid://bbtpf0daa613q" path="res://Scenes/level_end.tscn" id="13_etcnw"]
 [ext_resource type="PackedScene" uid="uid://dheaiv041bswr" path="res://Scenes/gold_coin.tscn" id="15_6il8w"]
@@ -25,6 +25,7 @@ metadata/_edit_vertical_guides_ = [830.0]
 [node name="UI" parent="." instance=ExtResource("3_vx1nt")]
 
 [node name="BG" parent="." instance=ExtResource("4_kl1at")]
+bg_texture = ExtResource("5_7lahx")
 
 [node name="Checkpoints" type="Node2D" parent="."]
 
@@ -306,11 +307,6 @@ position = Vector2(59, 135)
 
 [node name="Player" parent="." instance=ExtResource("10_y06ny")]
 position = Vector2(73, 149)
-
-[node name="Exits" type="Node" parent="."]
-
-[node name="Exit" parent="Exits" instance=ExtResource("11_6xr1l")]
-position = Vector2(1608, -435)
 
 [node name="DeathZone" parent="." instance=ExtResource("12_rw28y")]
 

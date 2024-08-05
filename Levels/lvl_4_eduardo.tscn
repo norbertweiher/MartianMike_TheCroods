@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyq3m4o5jy8nt"]
+[gd_scene load_steps=15 format=3 uid="uid://cyq3m4o5jy8nt"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_0x4l7"]
 [ext_resource type="PackedScene" uid="uid://du26e5t6ttg8f" path="res://Scenes/ui.tscn" id="2_jj3xl"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dkak3svr6khj3" path="res://Scenes/tile_map.tscn" id="6_7lpr7"]
 [ext_resource type="PackedScene" uid="uid://nioaoo781fvn" path="res://Scenes/bg.tscn" id="7_w738r"]
 [ext_resource type="PackedScene" uid="uid://dm8kloddub4r" path="res://Scenes/player.tscn" id="8_6ay5e"]
+[ext_resource type="Texture2D" uid="uid://d3brecmm06kv4" path="res://Assets/textures/bg/Pink.png" id="8_iljlk"]
 [ext_resource type="PackedScene" uid="uid://v53q03vq2c1g" path="res://Scenes/start_point.tscn" id="9_qpgqo"]
 [ext_resource type="PackedScene" uid="uid://bulinkyqi1a0w" path="res://Scenes/death_zone.tscn" id="10_fg42k"]
 [ext_resource type="PackedScene" uid="uid://cri6msgjx1d3f" path="res://Scenes/check_point.tscn" id="12_3q4iv"]
@@ -17,6 +18,7 @@
 [node name="Level4Eduardo" type="Node2D"]
 script = ExtResource("1_0x4l7")
 level_time = 99
+is_final_level = true
 
 [node name="UI" parent="." instance=ExtResource("2_jj3xl")]
 
@@ -121,6 +123,7 @@ position = Vector2(67, 190)
 layer_0/tile_data = PackedInt32Array(-458722, 393216, 0, -458721, 458752, 0, -458720, 524288, 0, -458725, 393216, 0, -458724, 458752, 0, -458723, 524288, 0, -458728, 393216, 0, -458727, 458752, 0, -458726, 524288, 0, -393189, 393216, 0, -393188, 458752, 0, -393187, 524288, 0)
 
 [node name="BG" parent="." instance=ExtResource("7_w738r")]
+bg_texture = ExtResource("8_iljlk")
 
 [node name="Player" parent="." instance=ExtResource("8_6ay5e")]
 position = Vector2(41, -26)

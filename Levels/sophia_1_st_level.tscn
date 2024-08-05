@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cv20ylsmaatvo"]
+[gd_scene load_steps=15 format=3 uid="uid://cv20ylsmaatvo"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_i64lw"]
 [ext_resource type="PackedScene" uid="uid://d042m0mh70v0e" path="res://Levels/level_eduardo.tscn" id="2_8n0ew"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bbtpf0daa613q" path="res://Scenes/level_end.tscn" id="5_kfqxr"]
 [ext_resource type="PackedScene" uid="uid://cri6msgjx1d3f" path="res://Scenes/check_point.tscn" id="5_obaca"]
 [ext_resource type="PackedScene" uid="uid://nioaoo781fvn" path="res://Scenes/bg.tscn" id="6_c0e30"]
-[ext_resource type="Texture2D" uid="uid://cph7hrxt3dg5i" path="res://Assets/textures/bg/Gray.png" id="7_oi2a7"]
 [ext_resource type="PackedScene" uid="uid://bxmlfmvahquuy" path="res://Scenes/saw_ball.tscn" id="8_scopy"]
 [ext_resource type="PackedScene" uid="uid://m4bfaaleing8" path="res://Scenes/spike_ball.tscn" id="9_b5la5"]
 [ext_resource type="PackedScene" uid="uid://dmkdk1w45doo2" path="res://Scenes/jump_pad.tscn" id="10_ipicy"]
@@ -37,7 +36,6 @@ position = Vector2(-16, 44)
 position = Vector2(29, 127)
 
 [node name="BG" parent="." instance=ExtResource("6_c0e30")]
-bg_texture = ExtResource("7_oi2a7")
 
 [node name="Traps" type="Node2D" parent="."]
 

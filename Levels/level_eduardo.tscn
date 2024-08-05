@@ -1,17 +1,16 @@
-[gd_scene load_steps=17 format=3 uid="uid://d042m0mh70v0e"]
+[gd_scene load_steps=16 format=3 uid="uid://d042m0mh70v0e"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_nth3r"]
 [ext_resource type="PackedScene" uid="uid://bpbkq1r50posj" path="res://Levels/lvl_2_eduardo.tscn" id="2_w42jn"]
 [ext_resource type="PackedScene" uid="uid://du26e5t6ttg8f" path="res://Scenes/ui.tscn" id="3_vgqes"]
 [ext_resource type="PackedScene" uid="uid://nioaoo781fvn" path="res://Scenes/bg.tscn" id="4_kqjmk"]
-[ext_resource type="Texture2D" uid="uid://cph7hrxt3dg5i" path="res://Assets/textures/bg/Gray.png" id="5_waa6x"]
+[ext_resource type="Texture2D" uid="uid://es5p7atm08sq" path="res://Assets/textures/bg/Brown.png" id="5_53ogl"]
 [ext_resource type="PackedScene" uid="uid://dm8kloddub4r" path="res://Scenes/player.tscn" id="6_hyjdw"]
 [ext_resource type="PackedScene" uid="uid://bxmlfmvahquuy" path="res://Scenes/saw_ball.tscn" id="7_4pake"]
 [ext_resource type="PackedScene" uid="uid://m4bfaaleing8" path="res://Scenes/spike_ball.tscn" id="8_aig20"]
 [ext_resource type="PackedScene" uid="uid://dmkdk1w45doo2" path="res://Scenes/jump_pad.tscn" id="9_l3cru"]
 [ext_resource type="PackedScene" uid="uid://dkak3svr6khj3" path="res://Scenes/tile_map.tscn" id="10_fd5dc"]
 [ext_resource type="PackedScene" uid="uid://v53q03vq2c1g" path="res://Scenes/start_point.tscn" id="11_l3ft6"]
-[ext_resource type="PackedScene" uid="uid://6ds0uyp5ffl5" path="res://Scenes/exit.tscn" id="12_e23dq"]
 [ext_resource type="PackedScene" uid="uid://cri6msgjx1d3f" path="res://Scenes/check_point.tscn" id="12_u2m4c"]
 [ext_resource type="PackedScene" uid="uid://dheaiv041bswr" path="res://Scenes/gold_coin.tscn" id="13_bp8hm"]
 [ext_resource type="PackedScene" uid="uid://bbtpf0daa613q" path="res://Scenes/level_end.tscn" id="13_fa2rn"]
@@ -27,7 +26,7 @@ level_time = 99
 [node name="UI" parent="." instance=ExtResource("3_vgqes")]
 
 [node name="BG" parent="." instance=ExtResource("4_kqjmk")]
-bg_texture = ExtResource("5_waa6x")
+bg_texture = ExtResource("5_53ogl")
 
 [node name="Player" parent="." instance=ExtResource("6_hyjdw")]
 position = Vector2(1423, -972)
@@ -307,11 +306,6 @@ position = Vector2(96, -106)
 
 [node name="GoldCoin" parent="Collectibles" instance=ExtResource("13_bp8hm")]
 position = Vector2(95, -62)
-
-[node name="Exits" type="Node" parent="."]
-
-[node name="Exit" parent="Exits" instance=ExtResource("12_e23dq")]
-position = Vector2(1939, -438)
 
 [node name="LevelEnd" parent="." instance=ExtResource("13_fa2rn")]
 position = Vector2(156, -34)

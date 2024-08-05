@@ -1,0 +1,145 @@
+[gd_scene load_steps=14 format=3 uid="uid://cyq3m4o5jy8nt"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_0x4l7"]
+[ext_resource type="PackedScene" uid="uid://du26e5t6ttg8f" path="res://Scenes/ui.tscn" id="2_jj3xl"]
+[ext_resource type="PackedScene" uid="uid://dmkdk1w45doo2" path="res://Scenes/jump_pad.tscn" id="3_7qn1b"]
+[ext_resource type="PackedScene" uid="uid://m4bfaaleing8" path="res://Scenes/spike_ball.tscn" id="4_drgpk"]
+[ext_resource type="PackedScene" uid="uid://bxmlfmvahquuy" path="res://Scenes/saw_ball.tscn" id="5_tjqlj"]
+[ext_resource type="PackedScene" uid="uid://dkak3svr6khj3" path="res://Scenes/tile_map.tscn" id="6_7lpr7"]
+[ext_resource type="PackedScene" uid="uid://nioaoo781fvn" path="res://Scenes/bg.tscn" id="7_w738r"]
+[ext_resource type="PackedScene" uid="uid://dm8kloddub4r" path="res://Scenes/player.tscn" id="8_6ay5e"]
+[ext_resource type="PackedScene" uid="uid://v53q03vq2c1g" path="res://Scenes/start_point.tscn" id="9_qpgqo"]
+[ext_resource type="PackedScene" uid="uid://bulinkyqi1a0w" path="res://Scenes/death_zone.tscn" id="10_fg42k"]
+[ext_resource type="PackedScene" uid="uid://cri6msgjx1d3f" path="res://Scenes/check_point.tscn" id="12_3q4iv"]
+[ext_resource type="PackedScene" uid="uid://dheaiv041bswr" path="res://Scenes/gold_coin.tscn" id="13_gfa1m"]
+[ext_resource type="PackedScene" uid="uid://bbtpf0daa613q" path="res://Scenes/level_end.tscn" id="14_r3waq"]
+
+[node name="Level4Eduardo" type="Node2D"]
+script = ExtResource("1_0x4l7")
+level_time = 99
+
+[node name="UI" parent="." instance=ExtResource("2_jj3xl")]
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="JumpPad" parent="Objects" instance=ExtResource("3_7qn1b")]
+position = Vector2(169, 23)
+
+[node name="JumpPad2" parent="Objects" instance=ExtResource("3_7qn1b")]
+position = Vector2(196, -73)
+
+[node name="JumpPad3" parent="Objects" instance=ExtResource("3_7qn1b")]
+position = Vector2(290, 54)
+
+[node name="JumpPad4" parent="Objects" instance=ExtResource("3_7qn1b")]
+position = Vector2(342, 105)
+
+[node name="JumpPad5" parent="Objects" instance=ExtResource("3_7qn1b")]
+position = Vector2(709, 101)
+
+[node name="JumpPad6" parent="Objects" instance=ExtResource("3_7qn1b")]
+position = Vector2(801, 102)
+
+[node name="JumpPad7" parent="Objects" instance=ExtResource("3_7qn1b")]
+position = Vector2(877, 60)
+
+[node name="Traps" type="Node" parent="."]
+
+[node name="SpikeBall" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(130, -23)
+
+[node name="SpikeBall2" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(316, 2)
+rotation = 1.5708
+
+[node name="SpikeBall3" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(394, 23)
+rotation = -1.5708
+
+[node name="SpikeBall7" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(645, 24)
+rotation = -1.5708
+
+[node name="SpikeBall8" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(395, 52)
+rotation = 1.5708
+
+[node name="SpikeBall10" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(647, 45)
+rotation = 1.5708
+
+[node name="SpikeBall12" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(762, 43)
+rotation = 1.5708
+
+[node name="SpikeBall13" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(764, 18)
+rotation = -1.5708
+
+[node name="SpikeBall14" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(844, -21)
+rotation = -1.5708
+
+[node name="SpikeBall9" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(848, 13)
+rotation = 1.5708
+
+[node name="SpikeBall11" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(848, 13)
+rotation = 1.5708
+
+[node name="SpikeBall15" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(848, 13)
+rotation = 1.5708
+
+[node name="SpikeBall4" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(182, 35)
+scale = Vector2(-16, nan)
+
+[node name="SpikeBall5" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(182, 35)
+scale = Vector2(-16, nan)
+
+[node name="SpikeBall6" parent="Traps" instance=ExtResource("4_drgpk")]
+position = Vector2(182, 35)
+scale = Vector2(-16, nan)
+
+[node name="SawBall" parent="Traps" instance=ExtResource("5_tjqlj")]
+position = Vector2(125, -28)
+
+[node name="SawBall2" parent="Traps" instance=ExtResource("5_tjqlj")]
+position = Vector2(239, -29)
+
+[node name="SawBall3" parent="Traps" instance=ExtResource("5_tjqlj")]
+position = Vector2(239, -29)
+
+[node name="SawBall18" parent="Traps" instance=ExtResource("5_tjqlj")]
+position = Vector2(841, 98)
+
+[node name="TileMap" parent="." instance=ExtResource("6_7lpr7")]
+position = Vector2(67, 190)
+layer_0/tile_data = PackedInt32Array(-458722, 393216, 0, -458721, 458752, 0, -458720, 524288, 0, -458725, 393216, 0, -458724, 458752, 0, -458723, 524288, 0, -458728, 393216, 0, -458727, 458752, 0, -458726, 524288, 0, -393189, 393216, 0, -393188, 458752, 0, -393187, 524288, 0)
+
+[node name="BG" parent="." instance=ExtResource("7_w738r")]
+
+[node name="Player" parent="." instance=ExtResource("8_6ay5e")]
+position = Vector2(41, -26)
+
+[node name="StartPoint" parent="." instance=ExtResource("9_qpgqo")]
+position = Vector2(35, -33)
+
+[node name="DeathZone" parent="." instance=ExtResource("10_fg42k")]
+position = Vector2(-65, 319)
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="CheckPoint" parent="Checkpoints" instance=ExtResource("12_3q4iv")]
+position = Vector2(44, -99)
+
+[node name="Collectibles" type="Node" parent="."]
+
+[node name="GoldCoin" parent="Collectibles" instance=ExtResource("13_gfa1m")]
+position = Vector2(43, -55)
+
+[node name="LevelEnd" parent="." instance=ExtResource("14_r3waq")]
+position = Vector2(49, -185)
